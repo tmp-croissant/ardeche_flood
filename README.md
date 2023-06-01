@@ -1,5 +1,6 @@
 # Ardeche flood
 
+![alt text](https://github.com/tmp-croissant/ardeche_flood/tree/main/visualisation/ardeche_basins.png?raw=true)
 
 ## Data sources
 

@@ -1,5 +1,7 @@
 import glob
 from collections import UserDict
+from pathlib import Path
+from typing import Tuple
 
 import numpy.typing as npt
 import rasterio
@@ -61,3 +63,13 @@ def save_geotiff(file_path: str, array: npt.NDArray, profile: UserDict) -> None:
     """Save classic Geotiff"""
     with rasterio.open(file_path, "w", **profile) as dst:
         dst.write(array, 1)
+
+
+def read_geotiff_with_profile(file_path: str) -> Tuple[npt.NDArray, UserDict]:
+    if Path(file_path).exists():
+        with rasterio.open(file_path, "r") as src:
+            array = src.read(src)
+            profile = src.profile
+        return array, profile
+    else:
+        raise ValueError(f"Specified file does not exist at: {file_path}")
