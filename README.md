@@ -1,6 +1,8 @@
 # Ardeche flood
 
-![alt text](https://github.com/tmp-croissant/ardeche_flood/tree/main/visualisation/ardeche_basins.png?raw=true)
+### Map of the main river basins in Ardeche
+
+![Ardeche basins viz](visualisation/ardeche_basins.png?raw=true)
 
 ## Data sources
 
